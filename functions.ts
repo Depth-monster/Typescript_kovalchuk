@@ -25,3 +25,14 @@ console.log(createSkills(...skills))//"fs, f, s, f, s, f, s, f, s"
 
 /////////////////////
 
+//Funcrion variable type
+let myFync: (just: string) => void;
+
+function oldFunc(name: string): void {
+  alert(`Hello ${name},nice to meet you`)
+}
+myFync = oldFunc;
+console.log(myFync('Azat'))
+{/*
+Hello Azat,nice to meet you
+*/}
