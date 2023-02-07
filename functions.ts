@@ -14,4 +14,14 @@ const createPassword3 = (name?: string, age?: number | string) => `${name !== un
 console.log('optional with `?`',createPassword3())
 
 
-//
+
+//rest operates - остаточные параметры
+const skills: Array<string> = ['f', 's', 'f', 's', 'f', 's', 'f', 's', 'f', 's']
+
+const createSkills = (name?: string, ...skills: Array<string>) =>
+  `${name !== undefined ? name : ''}${skills.join(', ')}`
+
+console.log(createSkills(...skills))//"fs, f, s, f, s, f, s, f, s" 
+
+/////////////////////
+
