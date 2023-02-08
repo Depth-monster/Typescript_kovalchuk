@@ -32,7 +32,7 @@ class Me {
         this.nick = nick;
     }
 }
-const Azat = new Me('Azat', 22, 'pezda');
+const Azat = new Me('Azat', 22, 'agent_47');
 console.log(Azat);
 
 ```
