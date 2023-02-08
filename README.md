@@ -1,4 +1,132 @@
 # Typescript_kovalchuk
+
+```ts
+//Generics - обобщения
+
+
+//const getter = (data: any):any => data;
+
+
+
+function getter<T>(data: T): T {
+  return data;
+}
+console.log((getter<number>(10).toString().length))
+
+
+
+
+type dd<T extends string | number | null> = T;
+const azat: dd<string | number | null>[] = [];
+
+
+
+azat.push(4, 's', null, 6, 6, 6, 6)
+console.log(azat)
+
+////////////////////////////////////////////////
+function foo<T>(data: T): T {
+  return data
+}
+const out = foo<string>('Siiiiiiiiiii')
+console.log(out)
+//namer: T;
+//sum1: (x: T, y: T) => T;
+
+/////////////////////////////////////////////
+class cl<T>{
+
+  constructor(public namer: T, public sum1: (x: T, y: T) => T) { }
+
+}
+
+let mine = new cl<number>(2, function (x, y) { return x + y });
+mine.namer = 3111111111111111;
+mine.sum1 = function (x, y) { return x + y }
+
+
+
+const res = mine.sum1(10, 23)
+console.log(mine.namer)
+console.log(res)
+
+```
+
+
+
+<details><summary><b>Output</b></summary>
+
+```ts
+"use strict";
+//Generics - обобщения
+//const getter = (data: any):any => data;
+function getter(data) {
+    return data;
+}
+console.log((getter(10).toString().length));
+const azat = [];
+azat.push(4, 's', null, 6, 6, 6, 6);
+console.log(azat);
+////////////////////////////////////////////////
+function foo(data) {
+    return data;
+}
+const out = foo('Siiiiiiiiiii');
+console.log(out);
+//namer: T;
+//sum1: (x: T, y: T) => T;
+/////////////////////////////////////////////
+class cl {
+    constructor(namer, sum1) {
+        this.namer = namer;
+        this.sum1 = sum1;
+    }
+}
+let mine = new cl(2, function (x, y) { return x + y; });
+mine.namer = 3111111111111111;
+mine.sum1 = function (x, y) { return x + y; };
+const res = mine.sum1(10, 23);
+console.log(mine.namer);
+console.log(res);
+
+```
+
+
+</details>
+
+
+<details><summary><b>Compiler Options</b></summary>
+
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES2017",
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "node"
+  }
+}
+```
+
+
+</details>
+
+**Playground Link:** [Provided](https://www.typescriptlang.org/play?ts=4.9.5#code/PTDiFMDtwJwSwMYGcAEBaFg+EEIwgPCSIIKwggvCCAcIIPIgAUFSAgPaRIAuKA5uI47CgLwoAUAEwCGjIQC4UQyAE8AlGKnSeAPhTDRAbipUAZgFdICRnHqt2nGAB4AKssEjxKa-KcoA3hRQoY7PTEhqDloAvhR0DLQANuAAdJG0LHx8bBywlpB6ALYARrB2AIwADLIxjLQAyozwkIkl0TWMABaystpUjNIADuBqAjYo4AAenJACqEzVLCgAPigZOVyzGZGRqrzWWuFMkgBeIhICfRNwNTNzWbkwZ8urANoAujwoD1raQnuMMZ16SI18ACwAGhQAHIkCDgTdgQA2GFwlDQ1pbKKxeKJd4iVoUEA43F4-EEwlE3EUfSGYymHS0Wg2OzqRzOCTWdyeby+fyBUQUUJbZi0PTMXhUmnHGp2EHlOBS6UyuAgpH0JAouIJPj8xitECQISZWBMrQgJBZfISPiDJnA6RM2QqJyvYkOx2OsKRIRIVAISK0jys3kwPRGWgwPjfbKRRBzHV6pzA0PhhAoI2ZE38c0xlBWpw27iqZzuFChblUaLMTInHq8aAAdxQnvSFzyfAATMCyUYTAEzZabW42Yw-AFBigANQZguyLRl6AxbW6q68ADM+WXK9Xa8n5ZiSfyTzbFM7g27+Z8-Y5Q9HSkLVF5bNQvCnsW3fCKwKbC4VEWiKsSD5nUZgH5Kl+aJ8D4SCtEAA)
+      
+
 ![image](https://user-images.githubusercontent.com/122405130/217327507-97b654a1-9eff-48e7-a7b1-24e99c8373f9.png)
 
 
