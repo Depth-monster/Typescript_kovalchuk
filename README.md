@@ -316,7 +316,9 @@ console.log(azat);
 **Playground Link:** [Provided](https://www.typescriptlang.org/play?#code/MYGwhgzhAEAykBdoG8BQrrWAewHYQQCcBXYBbQgCg02gAdiAjEAS2GlzAFsBTALmgFCLXAHMANDUx1hANzAIe0MKP4diXRj0KTMAShSoEACxYQAdJ14BeKzwDcR0xZU9rrx5gC+NYMbBiPJQgfLgaWoR6aLTQhDwIxIS40CZm5q7WIDQ+mBDxWP6BAIKqlADWoeHaUVIpzumq1mWe0D6obTj4SGAAXgrQ1hw8AO5wiJQA5EV9CBPiAEzzeqidENggPOYg2KKUvQrL+wjmfgGlAIxLK3hrG1s7ezN6QA)
 
 # NEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEXXXXXXXXXXXXXXXXXXXXXXTTTTTTTTTTTTTTTTTTTTTTTT
-      class List {
+
+```ts
+class List {
 
   static trunk = 1;
 
@@ -329,10 +331,74 @@ console.log(azat);
     this.age=k;
   }
    getPass() {
-    return `${List.name} ' ' ${List.trunk} ' ' ${List.age}`
+    return `${List.name} ' ' ${List.trunk} ' ' ${this.age}`
   }
 }
 
 const azat = new List('Azat', 21)
 
 console.log(azat.getPass())
+
+```
+
+
+
+<details><summary><b>Output</b></summary>
+
+```ts
+"use strict";
+class List {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this.name = name;
+        this.age = age;
+    }
+    setAge(k) {
+        this.age = k;
+    }
+    getPass() {
+        return `${List.name} ' ' ${List.trunk} ' ' ${this.age}`;
+    }
+}
+List.trunk = 1;
+const azat = new List('Azat', 21);
+console.log(azat.getPass());
+
+```
+
+
+</details>
+
+
+<details><summary><b>Compiler Options</b></summary>
+
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES2017",
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "node"
+  }
+}
+```
+
+
+</details>
+
+**Playground Link:** [Provided](https://www.typescriptlang.org/play?#code/MYGwhgzhAEAyCWEAu0DeAod1rLE+w0SATgK4B2A1tALzQCMA3JtsAPbnJnBJvEAUAB1IAjEAWjkwAWwCmALhwl45AOYAaaIOLwAbnlnQwqhZNLSRs4gEo0WbEQAWiAHRS5Nd7OYOnr47I0AT7QAL5Y9hCySACCJvyU8uTmljYYvkjOEC4BNJQh4Q4mSAAKkBD8tukOxNGkxOTQAAYAJKgIyG4ysqHQAOT90G0dSC4kFJS9AwNtmf4moU324eHo7JwoYABeeLSSsgDucIhI-H0xO0h9mgBM9NaY6xBsILIuIGyq-Nt4LsVlUEqDyAA)
+      
