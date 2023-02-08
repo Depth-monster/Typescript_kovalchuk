@@ -226,3 +226,92 @@ class Me {
 **Playground Link:** [Provided](https://www.typescriptlang.org/play?#code/MYGwhgzhAECyCm0DeAoN1rAPYDsIBcAnAV2Hy0IAoUNoAHYgIxAEthocwBbeALmgKEWOAOYAaAPQSIACywB3YSOhcsAExYAzNmHwsKMFoa50K+MDnw0MDZm2hgRfDsS6N4hMdfpNW7HGwA1vyCSl60tn70kBD8OK7uhNYAlMjQAL5oKOnQKEA)
       
 
+# NEEEEEEEEEEEEEEEEEEXXXXXXXXXXXXXXXXTTTTTTTTTTTTT
+
+```ts
+class Last {
+
+  constructor(
+    public name: string,
+    private age: number,
+  ) {
+this.name=name;
+this.age=age;
+  }
+  change(l:number){
+    return this.age=l
+  }
+  set changeAge(k:number){
+    this.age=k;
+  }
+
+}
+
+const azat = new Last('Azat',22)
+console.log(azat)
+azat.change(12)
+console.log(azat)
+```
+
+
+
+<details><summary><b>Output</b></summary>
+
+```ts
+"use strict";
+class Last {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+        this.name = name;
+        this.age = age;
+    }
+    change(l) {
+        return this.age = l;
+    }
+    set changeAge(k) {
+        this.age = k;
+    }
+}
+const azat = new Last('Azat', 22);
+console.log(azat);
+azat.change(12);
+console.log(azat);
+
+```
+
+
+</details>
+
+
+<details><summary><b>Compiler Options</b></summary>
+
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES2017",
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "node"
+  }
+}
+```
+
+
+</details>
+
+**Playground Link:** [Provided](https://www.typescriptlang.org/play?#code/MYGwhgzhAEAykBdoG8BQrrWAewHYQQCcBXYBbQgCg02gAdiAjEAS2GlzAFsBTALmgFCLXAHMANDUx1hANzAIe0MKP4diXRj0KTMAShSoEACxYQAdJ14BeKzwDcR0xZU9rrx5gC+NYMbBiPJQgfLgaWoR6aLTQhDwIxIS40CZm5q7WIDQ+mBDxWP6BAIKqlADWoeHaUVIpzumq1mWe0D6obTj4SGAAXgrQ1hw8AO5wiJQA5EV9CBPiAEzzeqidENggPOYg2KKUvQrL+wjmfgGlAIxLK3hrG1s7ezN6QA)
+      
