@@ -154,3 +154,75 @@ console.log(azat.getPass());
 
 **Playground Link:** [Provided](https://www.typescriptlang.org/play?#code/MYGwhgzhAECyCm0DeAoa6B2YC28BcEALgE4CWGA5gNwD0NAZsfImMMPFGumBfhgK7YARvGIBeAEwTaNVuyjQA9hhABPaOWiEAFolCQIXaBlLAA1gRLkKYgORgAXmEIB9bWABWq2zOVroACZg-BTahKKG6NAADgZ4AsKiYgCMEgDMMvSKxNBMYAFKKqpcXMDKRMT8wITZABRYuJZklACUqFFa2qQQAHQN8GL9VFwAvly8hAAKBrUtTdaoTIT8xBjQAAYAJEg63X048CO20Lbbu708h8enO129JuYj6yijJWMoZRhE0I7O0GLGeAAdzg8FqtgAgk5CLYWsMPuVFCB4D0QIoKLVfoQehNplBZi0UEA)
       
+# NEEEEEEEEEEEEEEEEEEXXXXXXXXXXXXXXXXTTTTTTTTTTTTT
+
+```ts
+class Me {
+
+
+  constructor(
+   public name: string,//showing modificatiors is important
+   public age: number,
+   public nick: string,
+   public pass: number
+  ) { }
+
+
+} 
+
+```
+
+
+
+<details><summary><b>Output</b></summary>
+
+```ts
+"use strict";
+class Me {
+    constructor(name, //showing modificatiors is important
+    age, nick, pass) {
+        this.name = name;
+        this.age = age;
+        this.nick = nick;
+        this.pass = pass;
+    }
+}
+
+```
+
+
+</details>
+
+
+<details><summary><b>Compiler Options</b></summary>
+
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES2017",
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "node"
+  }
+}
+```
+
+
+</details>
+
+**Playground Link:** [Provided](https://www.typescriptlang.org/play?#code/MYGwhgzhAECyCm0DeAoN1rAPYDsIBcAnAV2Hy0IAoUNoAHYgIxAEthocwBbeALmgKEWOAOYAaAPQSIACywB3YSOhcsAExYAzNmHwsKMFoa50K+MDnw0MDZm2hgRfDsS6N4hMdfpNW7HGwA1vyCSl60tn70kBD8OK7uhNYAlMjQAL5oKOnQKEA)
+      
+
