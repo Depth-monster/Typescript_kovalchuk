@@ -402,3 +402,81 @@ console.log(azat.getPass());
 
 **Playground Link:** [Provided](https://www.typescriptlang.org/play?#code/MYGwhgzhAEAyCWEAu0DeAod1rLE+w0SATgK4B2A1tALzQCMA3JtsAPbnJnBJvEAUAB1IAjEAWjkwAWwCmALhwl45AOYAaaIOLwAbnlnQwqhZNLSRs4gEo0WbEQAWiAHRS5Nd7OYOnr47I0AT7QAL5Y9hCySACCJvyU8uTmljYYvkjOEC4BNJQh4Q4mSAAKkBD8tukOxNGkxOTQAAYAJKgIyG4ysqHQAOT90G0dSC4kFJS9AwNtmf4moU324eHo7JwoYABeeLSSsgDucIhI-H0xO0h9mgBM9NaY6xBsILIuIGyq-Nt4LsVlUEqDyAA)
       
+# Interfaces
+# Interfaces
+# Interfaces
+```ts
+//структурное прототипирование
+//утиная типизация
+
+
+//над объектная сущность, помогает описать форму объекта
+interface User {
+  readonly name: string,//can't be changed
+  age?: number
+}
+
+const azat: User = {
+  name: 'azat',
+}
+console.log(azat.name,azat.age)
+azat.age=22;
+console.log(azat.name,' ',azat.age)
+azat.name='a' //can't be changed
+
+
+```
+
+
+
+<details><summary><b>Output</b></summary>
+
+```ts
+"use strict";
+//структурное прототипирование
+//утиная типизация
+const azat = {
+    name: 'azat',
+};
+console.log(azat.name, azat.age);
+azat.age = 22;
+console.log(azat.name, ' ', azat.age);
+azat.name = 'a'; //can't be changed
+
+```
+
+
+</details>
+
+
+<details><summary><b>Compiler Options</b></summary>
+
+```json
+{
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "strictBindCallApply": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES2017",
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "node"
+  }
+}
+```
+
+
+</details>
+
+**Playground Link:** [Provided](https://www.typescriptlang.org/play?ts=4.9.5#code/PTSCIIhEEARBGEQQuEHalC8IIPhBCsIAAkPwgkXj4BwgWBugTCCAMIEgWgFAjTgFLmDyIBo8YOwg5gYiAEs1BIZoBYQDCkCMIICkQNPGZtQ0QJIgqCIBkQADTYUgHhAUgZhByacOOKhy4NRkAiICkg7o46bPDkaASwB2AFwCmAJwAzAEMAY18MAFUAZwCMAG8aDAx-X2CAEwB7TwAbAE8MT2CAW18ALgxo738vAHMNEFDgzwBybwwAIwjQgAtm2t90pIxggYB+Cs8AV2Ku-xoAX0FQ7KqRgC9g7wqYuIBeBOGi0oqW4M3vFo1FmhXPaMyc3wA6HMzagApzrefj3w1vt5nqNfABKGiA4EDPYAJhhAG5bqtHi83p9IX8NC0MFdISDwRiSr49mdsY1mm1Ot0+p4BkMaEA)
+      
